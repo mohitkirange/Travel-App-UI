@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Online Booking | UI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="active"><a href="#"><i class="material-icons size-2x rotate-90">flight</i></a></li>
+            <li><a href="#"><i class="material-icons size-2x">hotel </i></a></li>
+            <li><a href="#"><i class="material-icons size-2x"> directions_bus</i></a></li>
+            <li><a href="#"><i class="material-icons size-2x"> directions_car</i></a></li>
+            <li><a href="#"><i class="material-icons size-2x">more_horiz</i></a></li>
+        </ul>
+    </nav>
+    <div class="flight-booking-container">
+        <ul>
+            <li class="active"><a href="#RoundTrip">Round Trip</a></li>
+            <li><a href="#OneWay">One Way</a></li>
+            <li><a href="#MultiCity">Multi City</a></li>
+        </ul>
+        <div class="flight-booking-content container zoomed">
+            <div class="row">
+                <div class="col s5">
+                    <label for="from">FROM </label>
+                    <div class="input-grp">
+                        <input class="material-input" type="text" value="" required="required" /><span></span><span class="abbr" id="abbr-from">--</span>
+                    </div>
+                </div>
+                <div class="col s2 text-center">
+                    <div class="input-grp" style="margin-top: 40px;"><i class="material-icons">compare_arrows</i></div>
+                </div>
+                <div class="col s5">
+                    <label for="from">TO</label>
+                    <div class="input-grp">
+                        <input class="material-input" type="text" value="Los Angeles" required="required" /><span class="border"></span><span class="abbr" id="abbr-to">LA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <div class="row">
+                        <div class="col s6">
+                            <label for="from">DEPART </label>
+                            <div class="input-grp vertical small-font">
+                                <input class="material-input" type="text" value="10 Mar 2017" /><i class="material-icons date_icon">keyboard_arrow_down</i>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <label for="from">RETURN </label>
+                            <div class="input-grp vertical small-font">
+                                <input class="material-input" type="text" value="12 Mar 2017" /><i class="material-icons date_icon">keyboard_arrow_down</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="row">
+                        <div class="col s6 text-center">
+                            <label for="from">TRAVELLERS  </label>
+                            <div class="input-grp vertical radio-buttons" style="margin-top: 12px;">
+                                <input class="hide" id="one-travellers" type="radio" name="travellers" checked="checked" />
+                                <label class="material-icons" for="one-travellers">accessibility</label>
+                                <input class="hide" id="more-travellers" type="radio" name="travellers" />
+                                <label class="material-icons" for="more-travellers">supervisor_account</label>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <label for="from">CLASS </label>
+                            <div class="input-grp vertical smallest-font">
+                                <select class="material-input small-font">
+                    <option>First Class </option>
+                    <option>Middle Class </option>
+                    <option>Business Class </option>
+                  </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submit-div"><i class="material-icons text-center rotate-90">flight</i></div>
+        </div>
+        <div class="flight-booking-footer alert-icon">
+            <input class="hide" id="alertme" type="checkbox" />
+            <label for="alertme">   <span class="tick"><i class="material-icons">done </i></span>Alert me when Price Changes</label>
+        </div>
+        <div class="flight-search-box">
+            <button class="btn saerch">FLIGHT + HOTELS</button>
+            <button class="btn saerch"> <i class="material-icons size_1em">search</i></button>
+        </div>
+    </div>
+    <script>
+        $('ul li').click(function() {
+            $(this).siblings().removeClass('active')
+            $(this).addClass('active')
+        });
+    </script>
+</body>
+
+</html>
